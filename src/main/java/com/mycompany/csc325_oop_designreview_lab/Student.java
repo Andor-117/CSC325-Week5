@@ -25,6 +25,7 @@ public class Student extends Human {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 	
+    
 	// ToDo 3: Add a field for GPA and create setter and getter
 	
 	// ToDo 4: Add comments to your code
