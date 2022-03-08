@@ -8,12 +8,10 @@ package com.mycompany.csc325_oop_designreview_lab;
 public class Student extends Human {
     
     private float GPA;
-    private int credits;
 
-    public Student(String string, short s, int c) {
+    public Student(String string, short s) {
         super(string, s);
         this.GPA = 0;
-        this.credits = c;
     }
 
     // Returns the address
