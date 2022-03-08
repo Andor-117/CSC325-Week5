@@ -4,6 +4,7 @@
  */
 package com.mycompany.csc325_oop_designreview_lab;
 
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,27 +16,41 @@ public class MainClass {
 	
 	public static void main(String[] args) {
                 
-		Freshman std1 = new Freshman("James", (short)20, 12); // name, age, credits
+            // Create student 1
+		Freshman student1 = new Freshman("James", (short)20, 12); // name, age, credits
                 
-                System.out.println(std1);
+                // Set the address of student 1
+                student1.setAddress("1813 Merrick Rd");
+                Scanner scnr = new Scanner(System.in);
                 
-                Senior std2;
+                // Ask for a GPA for student 1
+                System.out.println("Please enter a GPA for " + student1.getName());
+                student1.setGPA(scnr.nextFloat());
                 
+                // Output student 1 info
+                System.out.println("-------------------------------------------");
+                System.out.println(student1.toString());
+                System.out.println("-------------------------------------------");
+                
+            // Seniors must have atleast 85 credits, throw exception if 84 credits or less
             try {
-                std2 = new Senior("John", (short)30, 90); // name, age, credits
+                // Create student 2
+                Senior student2 = new Senior("John", (short)30, 90); // name, age, credits
                 
-                System.out.println(std2);
+                // Set address of student 2
+                student2.setAddress("1946 Wantagh Ave");
+                
+                // Ask for a GPA for student 2
+                System.out.println("Please enter a GPA for " + student2.getName());
+                student2.setGPA(scnr.nextFloat());
+                
+                // Output student 2 info
+                System.out.println("-------------------------------------------");
+                System.out.println(student2.toString());
+                System.out.println("-------------------------------------------");
+                
             } catch (BadArgumentException ex) {
-                Logger.getLogger(MainClass.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println(ex.getMessage());
             }
-		
-		// ToDo 11: Set the gpa of the student using the scanner and user
-		// 			input and then print the output.
-		
-		
-		// ToDo 12: add comments and explain your code
-		
-		// ToDo 13: submit using a pull request.
 	}
-
 }
