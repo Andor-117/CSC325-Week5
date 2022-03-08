@@ -17,13 +17,13 @@ public class Student extends Human {
     // Returns the address
     @Override
     public String getAddress() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return address;
     }
 
     // Sets the address
     @Override
-    public void setAddress(String address) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void setAddress(String a) {
+        this.address = a;
     }
 
     // Sets the gpa

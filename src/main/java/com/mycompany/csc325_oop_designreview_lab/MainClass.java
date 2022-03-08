@@ -14,19 +14,19 @@ import java.util.logging.Logger;
 public class MainClass {
 	
 	public static void main(String[] args) {
-                
-                // ToDo 8: The senior class should have a minimum of 85 credits  
-		
-		// ToDo 9: Add a toString method for Freshman class
-		
+
                 // ToDo 10: Add a toString method for Senior class
                 
 		Freshman std1 = new Freshman("James", (short)20, 12); // name, age, credits
                 
+                System.out.println(std1);
+                
                 Senior std2;
                 
             try {
-                std2 = new Senior("John", (short)30, 90);
+                std2 = new Senior("John", (short)30, 90); // name, age, credits
+                
+                System.out.println(std2);
             } catch (BadArgumentException ex) {
                 Logger.getLogger(MainClass.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -34,8 +34,6 @@ public class MainClass {
 		// ToDo 11: Set the gpa of the student using the scanner and user
 		// 			input and then print the output.
 		
-		System.out.println(std1);
-                //System.out.println(std2);
 		
 		// ToDo 12: add comments and explain your code
 		

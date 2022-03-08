@@ -16,4 +16,8 @@ public class Senior extends Student{
         if (credits < 85)
             throw new BadArgumentException("Senior credits must be greater than 84");
     }
+    
+    public int getCredits () {
+        return this.credits;
+    }
 }
