@@ -14,8 +14,6 @@ import java.util.logging.Logger;
 public class MainClass {
 	
 	public static void main(String[] args) {
-
-                // ToDo 10: Add a toString method for Senior class
                 
 		Freshman std1 = new Freshman("James", (short)20, 12); // name, age, credits
                 
