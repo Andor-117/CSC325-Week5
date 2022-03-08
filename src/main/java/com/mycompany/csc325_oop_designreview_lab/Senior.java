@@ -3,11 +3,11 @@ package com.mycompany.csc325_oop_designreview_lab;
 
 /**
  *
- * @author Owner
+ * @author Owen Wurster
  */
 public class Senior extends Student{
     
-    private int credits;
+    final private int credits;
     
     public Senior(String string, short s, int c) throws BadArgumentException {
         super(string, s);
@@ -19,5 +19,14 @@ public class Senior extends Student{
     
     public int getCredits () {
         return this.credits;
+    }
+    
+    public String toString () {
+        String str = "Name: " + super.getName() + "\n" +
+                     "Address: " + super.getAddress() + "\n" +
+                     "Age: " + super.getAge() + "\n" + 
+                     "Credits: " + this.getCredits() + "\n" +
+                     "GPA: " + super.getGPA() + "\n";
+        return str;
     }
 }

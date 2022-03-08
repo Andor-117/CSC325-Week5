@@ -3,7 +3,7 @@ package com.mycompany.csc325_oop_designreview_lab;
 
 /**
  *
- * @author Owner
+ * @author Owen Wurster
  */
 public class BadArgumentException extends Exception { 
     public BadArgumentException(String errorMessage) {
